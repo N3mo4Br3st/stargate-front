@@ -1,0 +1,22 @@
+{
+  "type": "application",
+  "name": "stargate",
+  "root": "src",
+  "main": "app/app.module.ts",
+  "styles": [
+    "styles/main.scss"
+  ],
+  "environmentSource": "config/config.json",
+  "environments": {
+    "development": "config/config.dev.json",
+    "production": "config/config.prod.json"
+  },
+  "karmaConfig": "./karma.conf.js",
+  "spec": {
+    "component": true,
+    "directive": false,
+    "filter": false,
+    "service": true,
+    "module": true
+  }
+}
