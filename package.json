@@ -13,6 +13,7 @@
     "sonar:reporters": "sreporter"
   },
   "dependencies": {
+    "@types/bootstrap": "^3.3.36",
     "@uirouter/angularjs": "^1.0.5",
     "angular": "^1.6.2",
     "angular-animate": "^1.6.2",
@@ -21,6 +22,7 @@
     "angular-messages": "^1.6.2",
     "angular-resource": "^1.6.2",
     "angular-sanitize": "^1.6.2",
+    "bootstrap-sass": "^3.3.7",
     "oclazyload": "^1.1.0",
     "restangular": "^1.6.1"
   },
