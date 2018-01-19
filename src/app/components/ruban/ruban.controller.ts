@@ -5,10 +5,12 @@ export class RubanController {
 
   rubanService: RubanService;
   public rubans: Array<Ruban>;
+  idRubanSelected: number;
 
   constructor (rubanService: RubanService) {
     'ngInject';
     this.rubanService = rubanService;
+    this.idRubanSelected = 0;
   }
 
   $onInit () {
