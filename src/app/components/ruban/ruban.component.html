@@ -3,11 +3,12 @@
   <div class="form-group">
     <div class="row">
     <label for="sel1" class="col-lg-2">Rubans :</label>
-    <select class="form-group col-lg-2" id="sel1" ng-change="">
-      <option ng-repeat="ruban in $ctrl.rubans">{{ruban.name}}</option>
+    <select class="form-group col-lg-2" id="sel1" ng-model="id" ng-change="$ctrl.test(id)">
+      <option ng-repeat="ruban in $ctrl.rubans" value="{{ruban.id}}">{{ruban.name}}</option>
     </select>
+Ruban id : {{$ctrl.idRubanSelected}}
      </div>
   </div>
 </p>
-<led idRuban="$ctrl.idRubanSelected"  ng-if="$ctrl.idRubanSelected !== 0"></led>
+<led idRuban="1" ></led>
 

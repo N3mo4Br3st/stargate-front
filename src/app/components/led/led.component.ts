@@ -5,6 +5,6 @@ export const LedComponent: ng.IComponentOptions = {
   template  : require('./led.component.html'),
   controller: LedController,
   bindings : {
-    idRuban: "<"
+    idRuban: '<'
   }
 };

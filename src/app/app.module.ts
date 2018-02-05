@@ -7,6 +7,8 @@ import { AppRoutes } from './app.routing';
 import { AppComponent } from './app.component';
 import { RubanComponent } from './components/ruban/ruban.component';
 import { RubanService } from './services/ruban/ruban.service';
+import { LedService } from './services/led/led.service';
+import { LedComponent } from './components/led/led.component';
 
 let module: ng.IModule = angular.module('stargate', [
   'ngAnimate',
@@ -28,6 +30,8 @@ module.config(AppRoutes);
 
 module.component('app', AppComponent);
 module.component('ruban', RubanComponent);
+module.component('led', LedComponent);
+module.service('ledService', LedService);
 module.service('rubanService', RubanService);
 
 export const AppModule = module.name;

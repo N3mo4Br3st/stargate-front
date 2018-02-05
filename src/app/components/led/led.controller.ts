@@ -5,20 +5,15 @@ export class LedController {
 
   ledService: LedService;
   public leds: Array<Led>;
-  idRuban: number;
-
+  idRuban: string;
 
   constructor (ledService: LedService) {
     'ngInject';
     this.ledService = ledService;
-    this.idRuban = 0;
+    
   }
 
   $onInit () {
-    this.leds = this.ledService.getLeds(this.idRuban);
   }
 
- $onChanges = function (idRuban) {
-       this.leds = this.ledService.getLeds(idRuban);
-  }
 }

@@ -17,4 +17,9 @@ export class RubanController {
     this.rubans = this.rubanService.getRubans();
   }
 
+  test(id: number) {
+    this.idRubanSelected = id;
+    console.log(this.idRubanSelected);
+  }
+
 }
