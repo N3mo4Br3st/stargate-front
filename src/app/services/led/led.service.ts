@@ -11,7 +11,7 @@ export class LedService {
     let led3 = new Led(3,2);
     let led4 = new Led(4,2);
     let led5 = new Led(5,2);
-    let led6 = new Led(6,3);
+    let led6 = new Led(7,3);
 
     let returnArray = new Array<Led>();
     
@@ -29,7 +29,6 @@ export class LedService {
      if (idRuban === 3) {
       returnArray.push(led6);
     }    
-    returnArray.push(led6);
     return returnArray;
   }
 }

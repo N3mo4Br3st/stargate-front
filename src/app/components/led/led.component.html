@@ -2,9 +2,9 @@
 
   <div class="form-group">
     <div class="row">
-    <label for="sel1" class="col-lg-2">Led:</label>
-    <select class="form-group col-lg-2" id="sel1">
-      <option ng-repeat="led in $ctrl.led">{{led.id}}</option>
+    <label for="sel2" class="col-lg-2">Led:</label>
+    <select class="form-group col-lg-2" id="sel2"  >
+      <option ng-repeat="led in $ctrl.ledService.getLeds($ctrl.idRuban)">{{led.id}}</option>
     </select>
     Test idRuban : {{$ctrl.idRuban}}
      </div>
