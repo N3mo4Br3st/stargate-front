@@ -1,10 +1,11 @@
 import {Ruban} from '../../models/Ruban';
 import {RubanService} from '../../services/ruban/ruban.service';
+import * as angular from 'angular';
 
 export class RubanController {
 
   rubanService: RubanService;
-  public rubans: Array<Ruban>;
+  rubans: Array<Ruban>;
   idRubanSelected: number;
 
   constructor (rubanService: RubanService) {
@@ -17,8 +18,9 @@ export class RubanController {
     this.rubans = this.rubanService.getRubans();
   }
 
-  test(id: number) {
-    this.idRubanSelected = id;
+  changeRuban(id: number) {
+    let newId: number = angular.copy(id);
+    this.idRubanSelected = newId;
     console.log(this.idRubanSelected);
   }
 

@@ -1,20 +1,28 @@
 import {Led} from '../../models/Led';
 import {LedService} from '../../services/led/led.service';
+import * as angular from 'angular';
 
 export class LedController {
 
   ledService: LedService;
-  public leds: Array<Led>;
-  idRuban: string;
+  leds: Array<Led>;
+  idRuban: number;
   
-  constructor (ledService: LedService,idRuban: string) {
+  constructor (ledService: LedService) {
     'ngInject';
     this.ledService = ledService;
-    this.idRuban = idRuban;
   }
 
 
   $onInit () {
+    console.log('init led component' + this.idRuban);
+  }
+
+  $onChanges(changesObj: ng.IOnChangesObject) {
+    if (changesObj.idRuban) {
+      this.idRuban = Number(angular.copy(changesObj.idRuban.currentValue));
+      this.leds = this.ledService.getLeds(this.idRuban);
+    }
   }
 
 }
