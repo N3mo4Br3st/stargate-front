@@ -1,0 +1,24 @@
+<div class="slider">
+  <b>Rouge : </b> 
+  <input type="number" ng-model="$ctrl.redValue" class="form-control">
+  <rzslider class="slider"
+    rz-slider-model="$ctrl.redValue"
+    rz-slider-options="$ctrl.redOptions"></rzslider>
+</div>
+<br /><br />
+<div class="slider">
+  <b>Vert : </b>
+  <input type="number" ng-model="$ctrl.greenValue" class="form-control">
+  <rzslider class="slider"
+        rz-slider-model="$ctrl.greenValue"
+        rz-slider-options="$ctrl.greenOptions"></rzslider>
+</div>
+<br /><br />
+<div class="slider">
+  <b>Bleu : </b>
+  <input type="number" ng-model="$ctrl.blueValue" class="form-control">
+  <rzslider class="slider"
+    rz-slider-model="$ctrl.blueValue"
+    rz-slider-options="$ctrl.blueOptions"></rzslider>
+</div>
+<div class="sliderRender" ng-style="{'backgroundColor': 'rgb(' + $ctrl.redValue + ', ' + $ctrl.greenValue + ', ' + $ctrl.blueValue + ')'}"></div>

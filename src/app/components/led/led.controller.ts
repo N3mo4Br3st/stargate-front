@@ -7,7 +7,8 @@ export class LedController {
   ledService: LedService;
   leds: Array<Led>;
   idRuban: number;
-  
+  selectedLed: Led;
+
   constructor (ledService: LedService) {
     'ngInject';
     this.ledService = ledService;

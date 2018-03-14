@@ -9,6 +9,7 @@ import { RubanComponent } from './components/ruban/ruban.component';
 import { RubanService } from './services/ruban/ruban.service';
 import { LedService } from './services/led/led.service';
 import { LedComponent } from './components/led/led.component';
+import { ColorComponent } from './components/color/color/color.component';
 
 let module: ng.IModule = angular.module('stargate', [
   'ngAnimate',
@@ -19,7 +20,8 @@ let module: ng.IModule = angular.module('stargate', [
   'ngCookies',
   'ui.router',
   'restangular',
-  'oc.lazyLoad'
+  'oc.lazyLoad',
+  'rzModule'
 ]);
 
 module.constant('ENVIRONMENT', ENV);
@@ -33,5 +35,6 @@ module.component('ruban', RubanComponent);
 module.component('led', LedComponent);
 module.service('ledService', LedService);
 module.service('rubanService', RubanService);
+module.component('color', ColorComponent);
 
 export const AppModule = module.name;

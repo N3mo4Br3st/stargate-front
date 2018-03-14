@@ -8,5 +8,6 @@ import 'angular-cookies';
 import '@uirouter/angularjs';
 import 'restangular';
 import 'oclazyload';
+import 'angularjs-slider';
 
 /// <reference path="custom-typings.d.ts" />

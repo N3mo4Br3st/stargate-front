@@ -25,3 +25,5 @@ gen
 
 # logs folder
 dist-docs/
+
+package-lock.json
