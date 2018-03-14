@@ -1,4 +1,38 @@
 //----------------------------------------
 //  components/ruban
 //----------------------------------------
-
+form{
+    margin-left: -15px;
+}
+.multiselect {
+    width: 325px;
+}
+.selectBox {
+    position: relative;
+}
+  .selectBox select {
+    width: 100%;
+    padding-left: 15px;
+}
+.overSelect {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+#checkboxes {
+    display: none;
+    border: 1px #dadada solid;
+}
+#checkboxes label {
+    display: block;
+    margin-left: 40px;
+}
+#checkboxes #all {
+    margin-left: 20px;
+    margin-top: 5px;
+}
+#checkboxes label:hover {
+    cursor: pointer;
+}
