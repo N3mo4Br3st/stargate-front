@@ -2,9 +2,34 @@
   <div class="form-group">
     <div class="row">
       <label for="sel2" class="col-lg-2">Led:</label>
-      <select class="form-group col-lg-2" id="sel2"  >
+      <!-- <select class="form-group col-lg-2" id="sel2">
         <option ng-repeat="led in $ctrl.leds">{{led.id}}</option>
-      </select>
+      </select> -->
+      <form class="form-group col-lg-2" id="sel2">
+        <div class="multiselect">
+          <div class="selectBox" ng-click="$ctrl.showCheckboxes()">
+            <select>
+              <option>Select one or many led(s)</option>
+            </select>
+            <div class="overSelect"></div>
+          </div>
+
+          <div id="checkboxes">
+            <div id="checkbox">
+              <label id="all" for="one" ng-click="$ctrl.Checkboxes()">
+                <input type="checkbox" id="one" />
+                <span>Tous</span>
+              </label>
+            </div>
+            <div id="checkbox" ng-repeat="led in $ctrl.leds">
+              <label for="{{led.id}}">
+                <input type="checkbox" id="{{led.id}}" />
+                <span>Led {{led.id}} </span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </form>
     </div>
   </div>
 </p>
